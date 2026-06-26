@@ -1,0 +1,220 @@
+.mapa-section {
+    background:
+        linear-gradient(rgba(31, 58, 29, 0.96), rgba(31, 58, 29, 0.96)),
+        var(--cor-verde-escuro);
+    padding: 2.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.mapa-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+.mapa-content {
+    position: relative;
+    z-index: 2;
+}
+
+.mapa-text h2 {
+    font-family: var(--font-titulo);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: var(--cor-bege-claro);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.mapa-text p {
+    max-width: 340px;
+    color: #f0e5cf;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.6rem;
+}
+
+.btn-mapa {
+    background-color: #b99a45;
+    color: var(--cor-marrom-escuro);
+    padding: 0.8rem 1.4rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: 0.3s ease;
+}
+
+.btn-mapa:hover {
+    background-color: var(--cor-bege-claro);
+    color: var(--cor-marrom-escuro);
+    transform: translateY(-2px);
+}
+
+/* ÁREA DO MAPA */
+.mapa-area {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mapa-img {
+    width: 100%;
+    opacity: 0.95;
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.25));
+}
+
+/* MARCADORES */
+.map-marker {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.map-marker:hover {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+/* Posições dos pontos no mapa */
+.marker-guajajara {
+    top: 44%;
+    left: 38%;
+    background-color: #9d6b2f;
+}
+
+.marker-canela {
+    top: 33%;
+    left: 52%;
+    background-color: #ad7ba3;
+}
+
+.marker-krikati {
+    top: 24%;
+    left: 67%;
+    background-color: #d38522;
+}
+
+.marker-gaviao {
+    top: 49%;
+    left: 25%;
+    background-color: #5b6f2a;
+}
+
+.marker-awa {
+    top: 63%;
+    left: 60%;
+    background-color: #b94c68;
+}
+
+.marker-kaapor {
+    top: 55%;
+    left: 73%;
+    background-color: #915c64;
+}
+
+/* LEGENDA */
+.mapa-legenda {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.9rem;
+}
+
+.mapa-legenda li {
+    color: var(--cor-bege-claro);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.legenda-cor {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.legenda-cor.guajajara {
+    background-color: #9d6b2f;
+}
+
+.legenda-cor.canela {
+    background-color: #ad7ba3;
+}
+
+.legenda-cor.krikati {
+    background-color: #d38522;
+}
+
+.legenda-cor.gaviao {
+    background-color: #5b6f2a;
+}
+
+.legenda-cor.awa {
+    background-color: #b94c68;
+}
+
+.legenda-cor.kaapor {
+    background-color: #915c64;
+}
+
+/* RESPONSIVO */
+@media (max-width: 991px) {
+    .mapa-section {
+        padding: 3rem 0;
+    }
+
+    .mapa-text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .mapa-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mapa-area {
+        margin-bottom: 2rem;
+    }
+
+    .mapa-legenda {
+        max-width: 350px;
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .mapa-legenda {
+        grid-template-columns: 1fr;
+    }
+
+    .mapa-area {
+        max-width: 320px;
+    }
+
+    .map-marker {
+        width: 15px;
+        height: 15px;
+        border-width: 2px;
+    }
+}

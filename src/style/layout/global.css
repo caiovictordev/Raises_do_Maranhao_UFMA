@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --font-principal: 'Inter', Arial, Helvetica, sans-serif;
+    --font-titulo: Georgia, 'Times New Roman', serif;
+
+    --cor-marrom-escuro: #241204;
+    --cor-marrom-medio: #5c3518;
+    --cor-bege: #f4ead6;
+    --cor-bege-claro: #fff7e7;
+    --cor-verde-escuro: #263f1f;
+    --cor-verde-medio: #3e5e2b;
+    --cor-dourado: #c58b39;
+    --cor-texto: #24170f;
+    --cor-texto-suave: #4b3a2c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--cor-bege);
+    color: var(--cor-texto);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+}

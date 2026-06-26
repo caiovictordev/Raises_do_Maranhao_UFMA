@@ -1,0 +1,226 @@
+.cultura-section {
+    background-color: var(--cor-bege);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cultura-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(80, 50, 20, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(80, 50, 20, 0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+}
+
+.cultura-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* MENU DAS CATEGORIAS */
+.cultura-menu {
+    max-width: 1100px;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cultura-item {
+    border: none;
+    background: transparent;
+    color: var(--cor-texto);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.7rem 0.9rem;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.cultura-item span {
+    font-size: 2rem;
+}
+
+.cultura-item:hover,
+.cultura-item.active {
+    background-color: rgba(92, 53, 24, 0.12);
+    color: var(--cor-marrom-medio);
+}
+
+/* CONTEÚDO */
+.cultura-content {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.cultura-card {
+    height: 100%;
+    background-color: rgba(255, 248, 232, 0.75);
+    border: 1px solid rgba(92, 53, 24, 0.22);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(36, 18, 4, 0.08);
+    transition: 0.3s ease;
+}
+
+.cultura-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(36, 18, 4, 0.15);
+}
+
+.cultura-img {
+    width: 100%;
+    height: 210px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cultura-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cultura-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(36, 18, 4, 0.25)
+    );
+}
+
+/* BOTÃO PLAY */
+.play-button {
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(36, 18, 4, 0.82);
+    color: var(--cor-bege-claro);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0.2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: var(--cor-verde-escuro);
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* TEXTO DOS CARDS */
+.cultura-card-text {
+    padding: 1.2rem 1.4rem 1.5rem;
+}
+
+.cultura-card-text h3,
+.quiz-content h3 {
+    font-family: var(--font-titulo);
+    color: var(--cor-texto);
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
+}
+
+.cultura-card-text p,
+.quiz-content p {
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CARD DO QUIZ */
+.quiz-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-content {
+    padding: 1.2rem 1.4rem 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex: 1;
+}
+
+.btn-quiz {
+    background-color: var(--cor-verde-escuro);
+    color: #fff;
+    padding: 0.75rem 1.3rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.btn-quiz:hover {
+    background-color: var(--cor-verde-medio);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVO */
+@media (max-width: 991px) {
+    .cultura-menu {
+        justify-content: flex-start;
+    }
+
+    .quiz-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .cultura-section {
+        padding: 3rem 0;
+    }
+
+    .cultura-menu {
+        gap: 0.5rem;
+    }
+
+    .cultura-item {
+        width: 100%;
+        justify-content: flex-start;
+        background-color: rgba(255, 248, 232, 0.6);
+        border: 1px solid rgba(92, 53, 24, 0.18);
+    }
+
+    .cultura-img {
+        height: 180px;
+    }
+
+    .btn-quiz {
+        width: 100%;
+        justify-content: center;
+    }
+}

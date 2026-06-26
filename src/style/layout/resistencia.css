@@ -1,0 +1,202 @@
+.resistencia-section {
+    background-color: var(--cor-bege);
+    padding: 4rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.resistencia-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(80, 50, 20, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(80, 50, 20, 0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+}
+
+.resistencia-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* CONTEÚDO */
+.resistencia-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* LISTA DA ESQUERDA */
+.resistencia-lista {
+    display: grid;
+    gap: 1.4rem;
+}
+
+.resistencia-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.resistencia-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    color: var(--cor-bege-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+    box-shadow: 0 8px 18px rgba(36, 18, 4, 0.15);
+}
+
+.resistencia-icon.verde {
+    background-color: var(--cor-verde-escuro);
+}
+
+.resistencia-icon.laranja {
+    background-color: #a85c2a;
+}
+
+.resistencia-icon.dourado {
+    background-color: #b88a35;
+}
+
+.resistencia-icon.marrom {
+    background-color: var(--cor-marrom-medio);
+}
+
+.resistencia-item h3 {
+    font-family: var(--font-titulo);
+    font-size: 1.35rem;
+    color: var(--cor-texto);
+    margin-bottom: 0.35rem;
+}
+
+.resistencia-item p {
+    color: var(--cor-texto-suave);
+    font-size: 0.96rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* CARD DE VÍDEO */
+.resistencia-video {
+    text-align: center;
+}
+
+.resistencia-img {
+    width: 100%;
+    height: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 12px 24px rgba(36, 18, 4, 0.18);
+    border: 1px solid rgba(92, 53, 24, 0.22);
+}
+
+.resistencia-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resistencia-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(36, 18, 4, 0.18);
+}
+
+.resistencia-play {
+    z-index: 3;
+}
+
+.resistencia-video h3 {
+    max-width: 480px;
+    margin: 1rem auto 0;
+    font-family: var(--font-titulo);
+    font-size: 1.45rem;
+    color: var(--cor-texto);
+    line-height: 1.35;
+}
+
+/* BOTÃO FINAL */
+.resistencia-button-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.8rem;
+}
+
+.btn-apoio {
+    background-color: var(--cor-verde-escuro);
+    color: #fff;
+    padding: 0.95rem 2.4rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 8px 18px rgba(38, 63, 31, 0.25);
+    transition: 0.3s ease;
+}
+
+.btn-apoio:hover {
+    background-color: var(--cor-verde-medio);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-apoio span {
+    font-size: 1.2rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 991px) {
+    .resistencia-lista {
+        margin-bottom: 1rem;
+    }
+
+    .resistencia-img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .resistencia-section {
+        padding: 3rem 0 4rem;
+    }
+
+    .resistencia-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(255, 248, 232, 0.65);
+        border: 1px solid rgba(92, 53, 24, 0.18);
+        border-radius: 8px;
+        padding: 1.2rem;
+    }
+
+    .resistencia-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 1.4rem;
+    }
+
+    .resistencia-img {
+        height: 210px;
+    }
+
+    .btn-apoio {
+        width: 100%;
+        justify-content: center;
+        padding: 0.9rem 1rem;
+        font-size: 0.8rem;
+    }
+}
