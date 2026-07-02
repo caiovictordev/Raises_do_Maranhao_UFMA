@@ -1,0 +1,221 @@
+.voltar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.85rem 1.4rem;
+    min-width: 120px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: #8b5e34;
+    color: #fffaf3;
+
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(47, 36, 24, 0.18);
+    transition: 
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.voltar:hover {
+    background: #6f4525;
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(47, 36, 24, 0.25);
+}
+
+.voltar:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(47, 36, 24, 0.18);
+}
+
+.area-professor {
+    width: 100%;
+    padding: 5rem 1.5rem;
+    background: #f4f1ec;
+}
+
+.professor-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.professor-header {
+    max-width: 720px;
+    margin-bottom: 3rem;
+}
+
+.professor-tag {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(139, 94, 52, 0.12);
+    color: #8b5e34;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.professor-header h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    color: #2f2418;
+    margin-bottom: 1rem;
+}
+
+.professor-header p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #5f5143;
+}
+
+.professor-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.professor-card {
+    background: #fffaf3;
+    border: 1px solid rgba(139, 94, 52, 0.16);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 18px 40px rgba(47, 36, 24, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.professor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 55px rgba(47, 36, 24, 0.14);
+    border-color: rgba(139, 94, 52, 0.35);
+}
+
+.professor-card.destaque {
+    background: linear-gradient(135deg, #8b5e34, #5f3f25);
+    color: #fffaf3;
+}
+
+.card-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 1.4rem;
+    border-radius: 16px;
+    background: rgba(139, 94, 52, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+.professor-card.destaque .card-icon {
+    background: rgba(255, 250, 243, 0.16);
+}
+
+.professor-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.8rem;
+    color: #2f2418;
+}
+
+.professor-card.destaque h3 {
+    color: #fffaf3;
+}
+
+.professor-card p {
+    color: #6b5b4c;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.professor-card.destaque p {
+    color: rgba(255, 250, 243, 0.82);
+}
+
+.professor-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #8b5e34;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.professor-card a::after {
+    content: "→";
+    transition: transform 0.2s ease;
+}
+
+.professor-card a:hover::after {
+    transform: translateX(4px);
+}
+
+.professor-card.destaque a {
+    color: #fffaf3;
+}
+
+.professor-box {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 24px;
+    background: #2f4f3a;
+    color: #fffaf3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.professor-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.professor-box p {
+    color: rgba(255, 250, 243, 0.82);
+    line-height: 1.7;
+    max-width: 720px;
+}
+
+.professor-box button {
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    padding: 0.95rem 1.3rem;
+    background: #f2b35d;
+    color: #2f2418;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.professor-box button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+@media (min-width: 768px) {
+    .professor-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .professor-box {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .professor-box button {
+        width: auto;
+        white-space: nowrap;
+    }
+}
