@@ -90,43 +90,6 @@
     box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.15);
 }
 
-/* Posições dos pontos no mapa */
-.marker-guajajara {
-    top: 44%;
-    left: 38%;
-    background-color: #9d6b2f;
-}
-
-.marker-canela {
-    top: 33%;
-    left: 52%;
-    background-color: #ad7ba3;
-}
-
-.marker-krikati {
-    top: 24%;
-    left: 67%;
-    background-color: #d38522;
-}
-
-.marker-gaviao {
-    top: 49%;
-    left: 25%;
-    background-color: #5b6f2a;
-}
-
-.marker-awa {
-    top: 63%;
-    left: 60%;
-    background-color: #b94c68;
-}
-
-.marker-kaapor {
-    top: 55%;
-    left: 73%;
-    background-color: #915c64;
-}
-
 /* LEGENDA */
 .mapa-legenda {
     list-style: none;
@@ -152,28 +115,38 @@
     border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
+.legenda-cor.anapuru_muypura {
+    background-color: #2E7D32 ;
+}
+.legenda-cor.guaja {
+    background-color: #4CAF50 ;
+}
 .legenda-cor.guajajara {
-    background-color: #9d6b2f;
+    background-color: #C62828  ;
 }
-
-.legenda-cor.canela {
-    background-color: #ad7ba3;
+.legenda-cor.apanyekra {
+    background-color: #EF6C00  ;
 }
-
+.legenda-cor.memortumre {
+    background-color: #F9A825  ;
+}
+.legenda-cor.gamela {
+    background-color: #0288D1 ;
+}
 .legenda-cor.krikati {
-    background-color: #d38522;
+    background-color: #6D4C41 ;
 }
-
 .legenda-cor.gaviao {
-    background-color: #5b6f2a;
+    background-color: #7B1FA2 ;
 }
-
-.legenda-cor.awa {
-    background-color: #b94c68;
+.legenda-cor.kranye {
+    background-color: #1B5E20 ;
 }
-
-.legenda-cor.kaapor {
-    background-color: #915c64;
+.legenda-cor.krepynkateje  {
+    background-color: #00695C ;
+}
+.legenda-cor.kaapor  {
+    background-color:#00897B ;
 }
 
 /* RESPONSIVO */

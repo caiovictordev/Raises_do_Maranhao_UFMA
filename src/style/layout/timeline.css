@@ -1,8 +1,10 @@
+
 .timeline-section {
     background-color: var(--cor-bege);
     padding: 4rem 0 5rem;
     position: relative;
     overflow: hidden;
+    white-space: pre-line;
 }
 
 .timeline-section::before {
@@ -29,6 +31,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     position: relative;
+    
 }
 
 /* Linha horizontal */
